@@ -1,2 +1,2 @@
 # thecomputerguru
-my site
+This is a place where i will code my game site.
