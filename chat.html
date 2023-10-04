@@ -22,6 +22,14 @@
       collapsedModeOfflineLabel: 'Contact Us',
       greetingMessageUsername: 'Support Team',
       greetingMessage: 'Welcome. :wave: Type a message below if you have any questions!',
+      selfIdentifyFormFields: {
+        displayName: { label: 'Display Name', required: true, enabled: true },
+        first: { label: 'First Name', required: false, enabled: true },
+        last: { label: 'Last Name', required: false, enabled: true },
+        email: { label: 'Email', required: false, enabled: true },
+      },
+      selfIdentifyGreetingMsg: 'Your public chat info.',
+      selfIdentifyButtonLabel: 'Start chatting now',
     },
     widgetID: 'wgt_ckemapsjgplc14el7t8g',
     pk: 'H_BtX1MpyG_BnkZa2qkLb7-1ig0IcZ5Qoo9aHY5U_o2W',
@@ -30,8 +38,11 @@
   });
 
   rml('register', {
-    embedType: '',
-    userNaming: 'geo',
+    options: {
+      roomKey: '0x8aI3jpCpZJTyTKwEbYShAtDH-zaTr9QGJ90nQ-RzXf',
+    },
+    embedType: 'singleRoom',
+    userNaming: 'visitorSpecified',
 
     // Replace with the ID of the room-containing element.
     roomElementID: 'rml-room-1',
