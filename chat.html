@@ -1,0 +1,40 @@
+<!-- put this div where you want the chat room to render, it will fill its parent div by default -->
+<div
+  id="rml-room-1"
+  data-rml-room
+  data-rml-version="12.sep.2022"
+></div>
+
+<script>
+  window.rmlCalls = window.rmlCalls || {};
+  function rml() {
+    let ri = arguments[1].roomElementID;
+    if (!rmlCalls[ri]) rmlCalls[ri] = [];
+    rmlCalls[ri].push(arguments);
+  }
+
+  rml('config', {
+    options: {
+      embedPosition: 'inline',
+      chatLayout: 'sideBySide',
+      collapsedMode: 'none',
+      collapsedModeOnlineLabel: 'How can we help you?',
+      collapsedModeOfflineLabel: 'Contact Us',
+      greetingMessageUsername: 'Support Team',
+      greetingMessage: 'Welcome. :wave: Type a message below if you have any questions!',
+    },
+    widgetID: 'wgt_ckemapsjgplc14el7t8g',
+    pk: 'H_BtX1MpyG_BnkZa2qkLb7-1ig0IcZ5Qoo9aHY5U_o2W',
+    // Replace with the ID of the room-containing element.
+    roomElementID: 'rml-room-1',
+  });
+
+  rml('register', {
+    embedType: '',
+    userNaming: 'geo',
+
+    // Replace with the ID of the room-containing element.
+    roomElementID: 'rml-room-1',
+  });
+</script>
+<script src="https://embed.roomlio.com/embed.js"></script>
