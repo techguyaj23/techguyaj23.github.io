@@ -47,7 +47,20 @@ transition: all 100ms linear;
 -o-transition: all 100ms linear;}
     h1{
       font-size: 100px
+      animation: color-change 1s infinite;
     }
+    @keyframes color-change {
+  0% { color: red; }
+  12.5% { color: blue; }
+  25% { color: green; }
+  37.5% { color: yellow; }
+  50% { color: orange; }
+  62.5% { color: violet; }
+  75% { color: black; }
+  87.5% { color: white; }
+  100% { color: pink;}
+}
+
   </style>
   <title>Welcome to techguyaj23's place!</title>
 </head>
